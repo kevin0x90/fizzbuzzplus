@@ -6,12 +6,14 @@ public class FizzBuzzPlus {
         final FizzBuzz fizz = FizzBuzz.FIZZ;
         final FizzBuzz buzz = FizzBuzz.BUZZ;
 
-        if (fizz.divides(number) || fizz.isPartOf(number)) {
-            result += fizz;
-        }
+        if (number > 0) {
+            if (fizz.divides(number) || fizz.isPartOf(number)) {
+                result += fizz;
+            }
 
-        if (buzz.divides(number) || buzz.isPartOf(number)) {
-            result += buzz;
+            if (buzz.divides(number) || buzz.isPartOf(number)) {
+                result += buzz;
+            }
         }
 
         if (result.isEmpty()) {
